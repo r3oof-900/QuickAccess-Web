@@ -1,0 +1,175 @@
+كيف اقوم بحفظ "like" و "comment" في قاعدة البيانات وعرضها ايضا 
+
+ملاحظة لدي قاعدة البيانات جاهزة وهذه الجداول التي قمت بانشاءها
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article class="post">
+        <header>
+            <div class="title">
+                <h2><a href="#">Y-NAME-SER</a></h2>
+                <p>DESCRIPTION ->LIKE"We seek to provide safe, approved and advanced services through a
+                    qualified work team that works to achieve your demands."</p>
+            </div>
+            <div class="meta">
+                <time class="published" datetime="2015-11-01">November 1, 2015</time>
+                <a href="#" class="author"><span class="name">@USER</span><img src="../../img/newpost3.jpeg"
+                        alt="" /></a>
+            </div>
+        </header>
+        <a href="single.html" class="image featured"><img src="../../img/newpost3.jpeg" alt="" /></a>
+        <p>PARAGRAPH ->LIKE "In keeping with our slogan “complete care,” we have provided many modern
+            comprehensive and integrated services for the first time in Yemen."</p>
+        <footer>
+            <ul class="actions">
+                <li><a href="#" class="button large">Continue Reading</a></li>
+            </ul>
+            <ul class="stats">
+                <li><a href="#">General</a></li>
+              <!--like button-->  <li><a href="#" class="icon solid fa-heart">28</a></li>
+              <!--show and add comment button-->    <li><a href="#" class="icon solid fa-comment" id="comment">128</a></li>
+            </ul>
+        </footer>
+    </article>
+  
+
+    <div id="modals" class="comments-container" style="display: none;">
+        <h1>Comments</h1>
+
+        <ul id="comments-list" class="comments-list">
+            <li>
+                <div class="comment-main-level">
+
+                    <div class="comment-avatar">
+                        <img src="../../img/person2.png" alt="">
+                    </div>
+
+                    <div class="comment-box">
+                        <div class="comment-head">
+                            <h6 class="comment-name by-author"><a href="#">Agustin Ortiz</a></h6>
+                            <span>20 minutes ago</span>
+                            <i class="fa fa-reply"></i>
+                            <i class="fa fa-heart"></i>
+                        </div>
+                        <div class="comment-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure
+                            laudantium vitae, praesentium optio, sapiente distinctio illo?
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="comments-list reply-list">
+                    <li>
+
+                        <div class="comment-avatar"><img src="../../img/girlperson.jpeg" alt=""></div>
+
+                        <div class="comment-box">
+                            <div class="comment-head">
+                                <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                <span>10 minutes ago</span>
+                                <i class="fa fa-reply"></i>
+                                <i class="fa fa-heart"></i>
+                            </div>
+                            <div class="comment-content">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure
+                                laudantium vitae, praesentium optio, sapiente distinctio illo?
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+
+                        <div class="comment-avatar"><img src="../../img/person2.png" alt=""></div>
+
+                        <div class="comment-box">
+                            <div class="comment-head">
+                                <h6 class="comment-name by-author"><a href="#">Agustin Ortiz</a></h6>
+                                <span>10 minutes ago</span>
+                                <i class="fa fa-reply"></i>
+                                <i class="fa fa-heart"></i>
+                            </div>
+                            <div class="comment-content">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure
+                                laudantium vitae, praesentium optio, sapiente distinctio illo?
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="comment-main-level">
+
+                    <div class="comment-avatar"><img src="../../img/girlperson.jpeg" alt=""></div>
+
+                    <div class="comment-box">
+                        <div class="comment-head">
+                            <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                            <span>10 minutes ago</span>
+                            <i class="fa fa-reply"></i>
+                            <i class="fa fa-heart"></i>
+                        </div>
+                        <div class="comment-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure
+                            laudantium vitae, praesentium optio, sapiente distinctio illo?
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+        <ul>
+            <li>
+                <div class="comment-main-level">
+
+                    <div class="comment-avatar">
+                        <img class="pors" src="../../img/personal.gif" alt="">
+                    </div>
+
+
+
+                    <div class="comment-content">
+                        <input class="incom" type="text">
+
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <button id="closeBtns" class="close-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" fill="#ff7200"></path>
+            </svg>
+        </button>
+
+        <button id="posts">
+            post
+        </button>
+    </div>
+  
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    var modalBtns = document.getElementById("comment");
+  
+    var modals = document.getElementById("modals");
+    var closeBtns = document.getElementById("closeBtns");
+
+   modalBtns.addEventListener("click", function() {
+        modals.style.display = "block";
+        card.style.display="none";
+    });
+    closeBtns.addEventListener("click", function() {
+        modals.style.display = "none";
+    });
+    
+});
+  </script>
+</body>
+</html>
