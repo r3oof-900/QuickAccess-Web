@@ -70,8 +70,6 @@ SELECT * FROM home;
 
 ---
 
-**Developed by Raoof**
-
 
 ## Login Credentials
 
@@ -86,3 +84,8 @@ To log in and explore the features of the website, you can use the following cre
   - **Password:** `admin`
 
 > You can also log in using your own credentials if you have registered through the platform.
+
+
+**Developed by Raoof**
+
+
